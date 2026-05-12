@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Moha Derouich, futur développeur SLAM et expert infrastructure. Présentation de projets, compétences et contact.">
+    <title>Moha Derouich | Dev SLAM & Infra Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Syne:wght@400;700;800&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="dark-theme">
+
+    <!-- BACKGROUND -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- CURSORS -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="glass-nav">
+            <a href="#accueil" class="logo">M<span class="cyan">D</span>.dev</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Arsenal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button type="button" id="quick-view-btn" class="btn-glass">⚡ Quick View</button>
+                <a href="CV_Moha_Derouich.pdf" download class="btn-download">
+                    <i class="fas fa-file-pdf"></i> Télécharger CV
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MODAL QUICK VIEW -->
+    <div id="quick-view-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="qv-title">
+        <div class="modal-content glass">
+            <span class="close-modal" role="button" aria-label="Fermer la fenêtre">&times;</span>
+            <h2 id="qv-title" class="text-cyan">Profil Rapide</h2>
+            <div class="qv-grid">
+                <div class="qv-item"><strong>🎓 Formation:</strong> BTS SIO SLAM @ Ingetis</div>
+                <div class="qv-item"><strong>🌍 Langues:</strong> FR (Courant), EN (B2), AR (Maternel)</div>
+                <div class="qv-item"><strong>🛠️ Top Skills:</strong> Python, JS, SQL, Windows Server, Cisco</div>
+                <div class="qv-item"><strong>📍 Localisation:</strong> Paris, France</div>
+                <div class="qv-item"><strong>🛡️ Certifs:</strong> RGPD, EBIOS, Cerber Sécurité</div>
+                <div class="qv-item"><strong>📞 Contact:</strong> 0668397424</div>
+            </div>
+            <a href="CV_Moha_Derouich.pdf" download class="btn-download full-width">Télécharger le CV complet</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <main>
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="badge-neo">Futur Développeur SLAM & Expert Infra</div>
+            <h1 class="glitch-text">Moha <span class="accent">Derouich</span></h1>
+            <p class="typing-text" id="typing-text"></p>
+            <p class="hero-desc">
+                Étudiant en <span class="text-cyan">BTS SIO SLAM</span> à Ingetis Paris. 
+                Je combine la puissance du <strong>développement logiciel</strong> avec une maîtrise approfondie des <strong>systèmes et réseaux</strong>. 
+                Une approche hybride pour créer des applications performantes et sécurisées.
+            </p>
+            <div class="hero-btns">
+                <a href="#projets" class="btn-primary">Mes Projets</a>
+                <a href="#competences" class="btn-outline">Mon Arsenal</a>
+                <a href="CV_Moha_Derouich.pdf" download class="btn-download-hero">
+                    <i class="fas fa-download"></i> Télécharger CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE / PARCOURS -->
+    <section id="parcours" class="section">
+        <h2 class="section-title">Mon <span class="text-orange">Parcours</span></h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass">
+                    <span class="date">2025 - 2027</span>
+                    <h3>BTS SIO Option SLAM</h3>
+                    <p><strong>INGETIS PARIS</strong>. Spécialisation en développement d'applications, architecture logicielle et bases de données.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass">
+                    <span class="date">Janv. 2024 - Mars 2024</span>
+                    <h3>Support Informatique Niveaux 1 & 2</h3>
+                    <p><strong>Global Digital Ecology · Ifrane, Maroc</strong>. Déploiement de serveur Windows (Projet TAD), gestion et stockage des données dans le Cloud, support utilisateurs.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass">
+                    <span class="date">2024 - 2025</span>
+                    <h3>Baccalauréat Scientifique</h3>
+                    <p><strong>Maroc</strong> · Mention Assez Bien. Acquisition d'une rigueur analytique et logique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projets" class="section">
+        <h2 class="section-title">Réalisations <span class="text-cyan">Tech</span></h2>
+        <div class="projects-grid">
+            <div class="project-card glass">
+                <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>App de Gestion SLAM</h3>
+                <p>Développement d'une application complète incluant une base de données SQL et une interface utilisateur fluide.</p>
+                <div class="tags"><span>Python</span> <span>SQL</span> <span>UI/UX</span></div>
+            </div>
+            <div class="project-card glass">
+                <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+                <h3>Audit Sécurité Infra</h3>
+                <p>Mise en place de règles de pare-feu et segmentation VLAN pour sécuriser un réseau d'entreprise.</p>
+                <div class="tags"><span>Cisco</span> <span>Fortinet</span> <span>VLAN</span></div>
+            </div>
+            <div class="project-card glass">
+                <div class="project-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud Storage Project</h3>
+                <p>Optimisation du stockage de données et mise en place de sauvegardes automatisées dans le Cloud.</p>
+                <div class="tags"><span>Cloud</span> <span>Windows Server</span> <span>Backup</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS / ARSENAL -->
+    <section id="competences" class="section">
+        <h2 class="section-title">Arsenal <span class="text-orange">Technique</span></h2>
+        <div class="skills-container">
+            <div class="skill-group glass">
+                <h4 class="text-cyan"><i class="fas fa-code"></i> Développement & Data</h4>
+                <ul>
+                    <li>Shell / Bash</li><li>HTML5 / CSS3</li><li>JavaScript</li><li>Python</li><li>SQL</li><li>MySQL</li><li>MariaDB</li><li>Oracle</li>
+                </ul>
+            </div>
+            <div class="skill-group glass">
+                <h4 class="text-orange"><i class="fas fa-network-wired"></i> Réseaux & Sécurité</h4>
+                <ul>
+                    <li>Cisco, VLAN, RIP, NAT, VPN</li><li>Pare-feu, ACL, Fortinet, Palo Alto</li><li>pfSense, Antivirus</li><li>SSH, FTP, VOIP, WiFi</li>
+                </ul>
+            </div>
+            <div class="skill-group glass">
+                <h4 class="text-cyan"><i class="fas fa-server"></i> Systèmes & Virtu</h4>
+                <ul>
+                    <li>Linux, Microsoft Server, Windows 10</li><li>VMWare, Hyper-V, Proxmox, Docker</li><li>Citrix, VirtualBox</li>
+                </ul>
+            </div>
+            <div class="skill-group glass">
+                <h4 class="text-orange"><i class="fas fa-tasks"></i> Services & Parc</h4>
+                <ul>
+                    <li>O365, DHCP, DNS, Proxy, WDS, MDT, SCCM, RAID</li><li>Nagios, Centreon, SNMP, PRTG, WireShark</li><li>GLPI, OCS Inventory</li>
+                </ul>
+            </div>
+            <div class="skill-group glass">
+                <h4 class="text-cyan"><i class="fas fa-certificate"></i> Certifications</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> RGPD</li>
+                    <li><i class="fas fa-check-circle"></i> EBIOS Risk Manager</li>
+                    <li><i class="fas fa-check-circle"></i> Cerber Sécurité</li>
+                </ul>
+            </div>
+            <div class="skill-group glass">
+                <h4 class="text-orange"><i class="fas fa-user"></i> Soft Skills & Langues</h4>
+                <ul>
+                    <li>Esprit d'équipe, Dynamisme, Implication</li><li>Français (Courant), Anglais (B2), Arabe (Maternel)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="contact-wrapper glass">
+            <div class="contact-info">
+                <h2 class="section-title">Contact <span class="text-cyan">Moha</span></h2>
+                <p>Je suis ouvert aux opportunités d'alternance en développement SLAM.</p>
+                <div class="info-item"><i class="fas fa-envelope"></i> mohaderouich2@gmail.com</div>
+                <div class="info-item"><i class="fas fa-phone"></i> 06 68 39 74 24</div>
+                <div class="info-item"><i class="fas fa-map-marker-alt"></i> Paris, France</div>
+                <div class="info-item"><i class="fas fa-heart"></i> Sport, Voyages, Culture, Montage Vidéo</div>
+            </div>
+            <form class="contact-form">
+                <label for="contact-name" class="sr-only">Nom complet</label>
+                <input id="contact-name" type="text" placeholder="Nom complet" required>
+
+                <label for="contact-email" class="sr-only">Email</label>
+                <input id="contact-email" type="email" placeholder="Email" required>
+
+                <label for="contact-message" class="sr-only">Message</label>
+                <textarea id="contact-message" placeholder="Votre message..." required></textarea>
+
+                <button type="submit" class="btn-primary">Envoyer <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Moha Derouich | Développeur SLAM | Ingetis Paris</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
